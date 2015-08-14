@@ -15,9 +15,10 @@ import crawler
 
 
 class NearestNeighbor:
+    # TODO: add docstring
 
     def __init__(self, boost_title=1):
-        # TODO: add the docstring
+        # TODO: add docstring
         self.data = []
         self.dic = {}
         self.bowcollection = {}
@@ -30,7 +31,7 @@ class NearestNeighbor:
         """
         bow = {}
         if not title is None:
-            words = list(filter(len, re.split("\W", title)))
+            words = list(filter(len, re.split("\W+", title)))
             for word in words:
                 if not word in bow:
                     bow[word] = self.boost_title
@@ -38,7 +39,7 @@ class NearestNeighbor:
                     bow[word] += self.boost_title
         for line in s:
             line = line.lower()
-            words = list(filter(len, re.split("\W", line)))
+            words = list(filter(len, re.split("\W+", line)))
             for word in words:
                 if not word in bow:
                     bow[word] = 1
@@ -84,7 +85,7 @@ def tests():
 
 
 def main():
-    logging.basicConfig(filename="wikipediann.log", level=logging.DEBUG)
+    logging.basicConfig(filename="nearestneighbor.log", level=logging.DEBUG)
     nn = NearestNeighbor()
     nn.addbulkinstances("TestData/")
     nn.calculatetfidf()
