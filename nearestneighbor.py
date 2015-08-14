@@ -8,6 +8,7 @@ and cosine similarity
 """
 
 import os
+import math
 import time
 import logging
 import re
@@ -17,41 +18,47 @@ import crawler
 class NearestNeighbor:
     # TODO: add docstring
 
-    def __init__(self, boost_title=1):
+    def __init__(self, boost_title=1, tfidf_threshold=0):
         # TODO: add docstring
         self.data = []
-        self.dic = {}
+        self.idword = {}
         self.bowcollection = {}
+        self.features = {}
         self.boost_title = boost_title
+        self.tfidf_threshold = tfidf_threshold
 
     def bagofwords(self, s, title=None):
         """Creates bag of words representation for s.
         Each word is represented as [word,wordcount] where wordcount is the
         number of times word occurs in the document
         """
-        bow = {}
+        dic = {}
         if not title is None:
             words = list(filter(len, re.split("\W+", title)))
             for word in words:
-                if not word in bow:
-                    bow[word] = self.boost_title
+                if not word in self.idword:
+                    ind = len(self.idword)
+                    self.idword[word] = len(self.idword)
                 else:
-                    bow[word] += self.boost_title
+                    ind = self.idword[word]
+                if not ind in dic:
+                    dic[ind] = self.boost_title
+                else:
+                    dic[ind] += self.boost_title
         for line in s:
             line = line.lower()
             words = list(filter(len, re.split("\W+", line)))
             for word in words:
-                if not word in bow:
-                    bow[word] = 1
+                if not word in self.idword:
+                    ind = len(self.idword)
+                    self.idword[word] = len(self.idword)
                 else:
-                    bow[word] += 1
-        return bow
-
-    def updatedictionary(self, bow):
-        """Adds any new words present in bow to self.dic"""
-        for w in bow:
-            if not w in self.dic:
-                self.dic[w] = len(self.dic)
+                    ind = self.idword[word]
+                if not ind in dic:
+                    dic[ind] = self.boost_title
+                else:
+                    dic[ind] += self.boost_title
+        return [[w, dic[w]] for w in dic.keys()]
 
     def addinstance(self, instanceid, filepath=None, title=None, instancedata=None):
         """Reads data from file or takes in a string. Converts the instance
@@ -63,7 +70,6 @@ class NearestNeighbor:
             with open(filepath, "r", encoding="utf-8") as f:
                 instancedata = f.readlines()
         bow = self.bagofwords(instancedata, title)
-        self.updatedictionary(bow)
         self.bowcollection[instanceid] = bow
 
     def addbulkinstances(self, datafolder):
@@ -72,9 +78,27 @@ class NearestNeighbor:
             self.addinstance(instanceid=filepath,
                              filepath=datafolder + filepath)
 
-    def calculatetfidf(self):
-        """Calculated tf-idf for all the bag of words stored in self.bowcollection"""
-        raise NotImplementedError
+    def create_tfidf_features(self):
+        """Calculate tf-idf for all the bag of words stored in self.bowcollection"""
+        count = {}
+        doc_count = len(self.bowcollection)
+        for instanceid in self.bowcollection.keys():
+            for word in self.bowcollection[instanceid]:
+                id = word[0]
+                if not id in count:
+                    count[id] = 1
+                else:
+                    count[id] += 1
+        for instanceid in self.bowcollection.keys():
+            feature_vec = []
+            for word in self.bowcollection[instanceid]:
+                id = word[0]
+                val = float(word[1])
+                val_tfidf = val * math.log(doc_count / float(count[id]), 2)
+                if val_tfidf > self.tfidf_threshold:
+                    feature_vec.append((id, val_tfidf))
+            self.features[instanceid] = feature_vec
+
 
 
 def tests():
@@ -88,7 +112,7 @@ def main():
     logging.basicConfig(filename="nearestneighbor.log", level=logging.DEBUG)
     nn = NearestNeighbor()
     nn.addbulkinstances("TestData/")
-    nn.calculatetfidf()
+    nn.create_tfidf_features()
 
 if __name__ == "__main__":
     main()

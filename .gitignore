@@ -47,7 +47,7 @@ Temporary Items
 
 test.txt
 
-.log
+*.log
 
 __pycache__/
 TestData/
