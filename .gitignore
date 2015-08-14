@@ -49,4 +49,5 @@ test.txt
 
 wikipediann.log
 
-__pycache__
+__pycache__/
+TestData/
