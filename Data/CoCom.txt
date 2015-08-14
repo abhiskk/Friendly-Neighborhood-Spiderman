@@ -1,0 +1,42 @@
+CoCom
+CoCom is an acronym for Coordinating Committee for Multilateral Export Controls. CoCom was established by Western bloc powers in the first five years after the end of World War II, during the Cold War, to put an arms embargo on COMECON countries.
+CoCom ceased to function on March 31, 1994, and the then-current control list of embargoed goods was retained by the member nations until the successor, the Wassenaar Arrangement, was established.
+
+
+== Membership ==
+CoCom had 17 member states: Australia, Belgium, Canada, Denmark, France, Germany, Greece, Italy, Japan, Luxembourg, Netherlands, Norway, Portugal, Spain, Turkey, the United Kingdom and the United States.
+
+
+=== Laws and regulations ===
+In the United States, CoCom compliance was implemented in the 1960s via the Arms Export Control Act (AECA) and the State Department's regulatory supervision on AECA via International Traffic in Arms Regulations (ITAR), which are still in effect.
+
+
+== Violations ==
+
+Toshiba Machine Company of Japan and Kongsberg Group of Norway supplied eight computer-guided propeller milling machines to the Soviet Union between 1982 and 1984, an action that violated the CoCom regulations. The United States's position is that this greatly improved the ability of Soviet submarines to evade detection. Congress moved to sanction Toshiba, and bar imports of its products into the United States.
+
+
+== Legacy ==
+In GPS technology, the term "COCOM Limits" also refers to a limit placed on GPS tracking devices that disables tracking when the device calculates that it is moving faster than 1,000 knots (1,900 km/h; 1,200 mph) at an altitude higher than 18,000 m (59,000 ft). This was intended to prevent the use of GPS in intercontinental ballistic missile-like applications.
+Some manufacturers apply this limit only when both speed and altitude limits are reached, while other manufacturers disable tracking when either limit is reached. In the latter case, this causes some devices to refuse to operate in very high altitude balloons.
+
+
+== See also ==
+International Traffic in Arms Regulations
+Arms Export Control Act
+Defense Security Cooperation Agency
+Export Control Classification Number
+
+
+== References ==
+
+Notes
+
+
+== External links ==
+CoCom control lists, as published by the British Government
+CFAO 36-56 -- Export Controls Over Strategic and Military Goods
+Establishment of New General License for Shipments to Country Groups QWY and the People's Republic of China
+The reincarnation of CoCom: Explaining post-war export controls
+Export Control Blog
+THE TOSHIBA-KONGSBERG INCIDENT: SHORTCOMINGS OF COCOM, AND RECOMMENDATIONS FOR INCREASED EFFECTIVENESS OF EXPORT CONTROLS TO THE EAST BLOC, Wende A. Wrubel

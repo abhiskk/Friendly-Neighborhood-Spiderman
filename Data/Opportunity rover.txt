@@ -1,0 +1,127 @@
+Opportunity (rover)
+Opportunity, also known as MER-B (Mars Exploration Rover – B) or MER-1, is a robotic rover active on the planet Mars since 2004. Launched on July 7, 2003 as part of NASA's Mars Exploration Rover program, it landed in Meridiani Planum on January 25, 2004, three weeks after its twin Spirit (MER-A) touched down on the other side of the planet. With a planned 90 sol duration of activity, Spirit functioned until getting stuck in 2009 and ceased communications in 2010, while Opportunity remains active as of 2015, having already exceeded its operating plan by 7008356551200000000♠11 years, 109 days (in Earth time). Opportunity has continued to move, gather scientific observations, and report back to Earth for over 45 times its designed lifespan.
+Mission highlights include the initial 90 sol mission, finding extramartian meteorites such as Heat Shield Rock (Meridiani Planum meteorite), and over two years studying Victoria crater. It survived dust-storms and reached Endeavour crater in 2011, which has been described as a "second landing site".
+The Jet Propulsion Laboratory (JPL), a division of the California Institute of Technology in Pasadena, California, manages the Mars Exploration Rover project for NASA's Science Mission Directorate in Washington, D.C..
+
+
+== ObjectivesEdit ==
+
+The scientific objectives of the Mars Exploration Rover mission are to:
+Search for and characterize a variety of rocks and soils that hold clues to past water activity. In particular, samples sought will include those that have minerals deposited by water-related processes such as precipitation, evaporation, sedimentary cementation or hydrothermal activity.
+Determine the distribution and composition of minerals, rocks, and soils surrounding the landing sites.
+Determine what geologic processes have shaped the local terrain and influenced the chemistry. Such processes could include water or wind erosion, sedimentation, hydrothermal mechanisms, volcanism, and cratering.
+Perform calibration and validation of surface observations made by Mars Reconnaissance Orbiter instruments. This will help determine the accuracy and effectiveness of various instruments that survey Martian geology from orbit.
+Search for iron-containing minerals, identify and quantify relative amounts of specific mineral types that contain water or were formed in water, such as iron-bearing carbonates.
+Characterize the mineralogy and textures of rocks and soils and determine the processes that created them.
+Search for geological clues to the environmental conditions that existed when liquid water was present.
+Assess whether those environments were conducive to life.
+During the next two decades, NASA will continue to conduct missions to address whether life ever arose on Mars. The search begins with determining whether the Martian environment was ever suitable for life. Life, as we understand it, requires water, so the history of water on Mars is critical to finding out if the Martian environment was ever conducive to life. Although the Mars Exploration Rovers do not have the ability to detect life directly, they are offering very important information on the habitability of the environment in the planet's history.
+
+
+== Design and constructionEdit ==
+
+Opportunity (along with its twin, Spirit) is a six-wheeled, solar-powered robot standing 1.5 meters (4.9 ft) high, 2.3 meters (7.5 ft) wide, and 1.6 meters (5.2 ft) long and weighing 180 kilograms (400 lb). Six wheels on a rocker-bogie system enable mobility. Each wheel has its own motor, the vehicle is steered at front and rear and is designed to operate safely at tilts of up to 30 degrees. Maximum speed is 5 centimetres per second (2.0 in/s) although average speed is about a fifth of this (0.89 centimetres per second (0.35 in/s)). Both Spirit and Opportunity have pieces of the fallen World Trade Center's metal on them that were "turned into shields to protect cables on the drilling mechanisms".
+Solar arrays generate about 140 watts for up to four hours per Martian day (sol) while rechargeable lithium ion batteries store energy for use at night. Opportunity's onboard computer uses a 20 MHz RAD6000 CPU with 128 MB of DRAM, 3 MB of EEPROM, and 256 MB of flash memory. The rover's operating temperature ranges from −40 to +40 °C (−40 to 104 °F) and radioisotope heaters provide a base level of heating, assisted by electrical heaters when necessary. A gold film and a layer of silica aerogel provide insulation.
+Communications depends on an omnidirectional low-gain antenna communicating at a low data rate and a steerable high-gain antenna, both in direct contact with Earth. A low gain antenna is also used to relay data to spacecraft orbiting Mars.
+Fixed science/engineering instruments include:
+Panoramic Camera (Pancam) – examines the texture, color, mineralogy, and structure of the local terrain.
+Navigation Camera (Navcam) – monochrome with a higher field of view but lower resolution, for navigation and driving.
+Miniature Thermal Emission Spectrometer (Mini-TES) – identifies promising rocks and soils for closer examination, and determines the processes that formed them.
+Hazcams, two B&W cameras with 120 degree field of view, that provide additional data about the rover's surroundings.
+The rover arm holds the following instruments:
+Mössbauer spectrometer (MB) MIMOS II – used for close-up investigations of the mineralogy of iron-bearing rocks and soils.
+Alpha particle X-ray spectrometer (APXS) – close-up analysis of the abundances of elements that make up rocks and soils.
+Magnets – for collecting magnetic dust particles
+Microscopic Imager (MI) – obtains close-up, high-resolution images of rocks and soils.
+Rock Abrasion Tool (RAT) – exposes fresh material for examination by instruments on board.
+The cameras produce 1024-pixel by 1024-pixel images, the data is compressed with ICER, stored, and transmitted later.
+The rover's name was chosen through a NASA sponsored student essay competition.
+
+
+== Mission overviewEdit ==
+
+The primary surface mission for Opportunity was planned to last 90 sols. The mission has received several extensions and has been operating for 4218 days since landing. An archive of weekly updates on the rover's status can be found at the Opportunity Update Archive.
+From its initial landing, by chance, into an impact crater amidst an otherwise generally flat plain, Opportunity has successfully investigated soil and rock samples and taken panoramic photos of its landing site. Its sampling allowed NASA scientists to make hypotheses concerning the presence of hematite and past presence of water on the surface of Mars. Following this, it was directed to travel across the surface of Mars to investigate another crater site, Endurance crater, which it investigated from June – December 2004. Subsequently, Opportunity examined the impact site of its own heat shield and discovered an intact meteorite, now known as Heat Shield Rock, on the surface of Mars.
+From late April 2005 to early June of that year, Opportunity was perilously lodged in a sand dune, with several wheels buried in the sand. Over a six-week period Earth-based physical simulations were performed to decide how best to extract the rover from its position without risking a permanent immobilization of the valuable vehicle. Successful maneuvering a few centimeters at a time eventually freed the rover, which resumed its travels.
+Opportunity was directed to proceed in a southerly direction to Erebus crater, a large, shallow, partially buried crater and a stopover on the way south towards Victoria crater, between October 2005 and March 2006. It experienced some mechanical problems with its robotic arm.
+In late September 2006, Opportunity reached Victoria crater and explored along the rim in a clockwise direction. In June 2007 it returned to Duck Bay, its original arrival point; in September 2007 it entered the crater to begin a detailed study. In August 2008, Opportunity left Victoria crater for Endeavour crater, which it reached on August 9, 2011.
+
+Here at the rim of the Endeavour crater the rover moved around a geographic feature named Cape York. The Mars Reconnaissance Orbiter had detected phyllosilicates there, and the rover analyzed the rocks with its instruments to check this sighting on the ground. This structure was analyzed in depth until summer 2013. At May 2013 the rover was heading south to a hill named Solander Point.
+Opportunity's total odometry as of June 21, 2015 (sol 4055) is 42.37 km (26.33 mi). Since January 2013, the solar array dust factor (one of the determinants of solar power production) varied from a relatively dusty 0.467 on December 5, 2013 (sol 3507) to a relatively clean 0.964 on May 13, 2014 (sol 3662).
+In December 2014, NASA reported that Opportunity was suffering from "amnesia" events in which the rover fails to write data, e.g. telemetry information, to non-volatile memory. The hardware failure is believed to be due to an age-related fault in one of the rover's seven memory banks. As a result, NASA had aimed to force the rover's software to ignore the failed memory bank, however amnesia events continued to occur which eventually resulted in vehicle resets. In light of this, on Sol 4027 (May 23, 2015), the rover was configured to operate in RAM-only mode, completely avoiding the use of non-volatile memory for storage.
+
+
+== Mission timelineEdit ==
+
+
+== Scientific findingsEdit ==
+
+Opportunity has provided substantial evidence in support of the mission's primary scientific goals: to search for and characterize a wide range of rocks and soils that hold clues to past water activity on Mars. In addition to investigating the water, Opportunity has also obtained astronomical observations and atmospheric data.
+
+
+== PowerEdit ==
+Examples of watt-hours per day collected by the rover. The rover uses combination of solar cells and a rechargeable chemical battery.
+
+
+== HonorsEdit ==
+Honoring Opportunity's great contribution to the exploration of Mars, an asteroid was named Opportunity— 39382 Opportunity. The name was proposed by Ingrid van Houten-Groeneveld who, along with Cornelis Johannes van Houten and Tom Gehrels, discovered the asteroid on September 24, 1960. Opportunity's lander is Challenger Memorial Station.
+On July 28, 2014, it was announced that Opportunity, having traversed over 40 km (25 mi), had become the rover achieving the longest distance, surpassing the previous record of 39 km (24 mi) on the Moon by Lunokhod 2.
+On March 24, 2015, NASA celebrated Opportunity having traveled the distance of a Marathon race, 26.219 miles, from the start of Opportunity's landing and travelling on Mars.
+
+
+== PicturesEdit ==
+The rover can take pictures with its different cameras, but only the PanCam camera has the ability to photograph a scene with different color filters. The panorama views are usually built up from PanCam images. As of November 20, 2013, Opportunity had returned 186,246 pictures.
+
+
+=== ViewsEdit ===
+
+
+=== PanoramasEdit ===
+
+
+=== Microscopic imagesEdit ===
+
+
+=== From orbitEdit ===
+
+
+=== MapsEdit ===
+
+
+== Image map of MarsEdit ==
+The following imagemap of the planet Mars has embedded links to geographical features in addition to the noted rover and lander locations. Click on the features and you will be taken to the corresponding article pages. North is at the top; Elevations: red (higher), yellow (zero), blue (lower).
+
+
+== See alsoEdit ==
+
+
+== ReferencesEdit ==
+
+
+== External linksEdit ==
+
+
+=== NASA linksEdit ===
+JPL's Mars Exploration Rover home page
+JPL's Mars Exploration Rover Mission page
+Opportunity Mission Profile by NASA's Solar System Exploration
+Mission Status updates from NASA JPL
+
+
+=== MSSS and WUSTL linksEdit ===
+Finding Opportunity: high resolution images of landing site (Mars Global Surveyor – Mars Orbiter Camera)
+MER Analyst's Notebook, Interactive access to mission data and documentation
+
+
+=== Other linksEdit ===
+Wikisource:MER press briefing, January 28, 2004
+Full-page, high-res spherical panorama of Opportunity in Erebus Crater, nasatech.net, Nov 23, to Dec 5, 2005 (long download, uses Java)
+Full-page, high-res spherical panorama of Opportunity in Victoria Crater, nasatech.net, October 23 to December 11, 2007 (long download, uses Java)
+Finding Opportunity: interactive Mars atlas based on Viking images: you can zoom in/out and pan images, to find your preferred site (has broken links)
+MER Imagery: automatically generated 3D s/imagerghtereo anaglyphs and pseudo-color images based on JPL raw images
+(AXCH) 2004 Mars Exploration Rovers Highlights – News, status, technical info, history, and more.
+Unmanned Spaceflight.com discussion on Opportunity
+Road to Endeavour travelogue blog
+Mars Exploration Rover Manual (Unofficial)
+Video (02:59): Opportunity's View Of Three-Year 13-Mile Trek Across Mars (309-Images)
+Latest images (Midnightplanets.com)

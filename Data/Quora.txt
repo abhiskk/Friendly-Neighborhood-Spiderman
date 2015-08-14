@@ -1,0 +1,46 @@
+Quora
+Quora is a question-and-answer website where questions are asked, answered, edited and organized by its community of users. The company was founded in June 2009, and the website was made available to the public on June 21, 2010. Quora aggregates questions and answers to topics. Users can collaborate by editing questions and suggesting edits to other users' answers.
+
+
+== History ==
+
+Quora was co-founded by two former Facebook employees, Adam D'Angelo and Charlie Cheever. D'Angelo resigned from his position at Facebook in January 2010 to create Quora. He said that he and Cheever were inspired to create Quora because "we thought that Q & A is one of those areas on the internet where there are a lot of sites, but no one had come along and built something that was really good yet." Quora's base of users grew quickly in December 2010.
+Quora had an estimated 500,000 registered users, as of January 2011. In June 2011, Quora redesigned its website, in order to make information discovery and navigation easier. Some noted that the redesigned site had definite similarities to Wikipedia. Quora released an official iPhone app on September 29, 2011  and an official Android app on September 5, 2012.
+In September 2012, Quora announced that co-founder Charlie Cheever was stepping back from a day-to-day role at the company, while continuing to retain an advisory role. An article in Business Insider quoted an anonymous Quora answer, claimed to be written by an insider, that stated that Cheever left the company because he wanted to focus on the user experience, whereas D'Angelo wanted to focus on growth, and D'Angelo, by financing the Series B investment mostly from his own money, acquired sufficient control over the company to have things his way.
+In January 2013, Quora launched a blogging platform.
+Quora launched full text search of questions and answers on its website on March 20, 2013, and extended the feature to mobile devices in late May 2013. It also announced in May 2013 that all its metrics had tripled relative to the same time last year.
+On November 12, 2013, Quora introduced a feature they called Stats that they billed as a dashboard for writers. This would allow all Quora users to see summary and detailed statistics regarding how many people had viewed, upvoted, followed, and shared their questions and answers. TechCrunch reported that, although Quora did not have any immediate plans for monetization, they believed that search ads would likely be their eventual source of monetization.
+In April 2014, it was announced that Quora was raising $80 million from Tiger Global at a reported $900 million valuation. Quora was also one of the members of the Summer 2014 Y Combinator batch.
+
+
+== Operation ==
+Quora requires users to register with their real names rather than a screen name, and the site is essentially unusable if a user is not logged in and uses cookies. Quora users may also log into Quora with their Google, Twitter or Facebook accounts using the OpenID technology. Quora users can upvote or downvote answers; they can also suggest edits to existing answers provided by other users. The Quora community includes some well-known people, such as Marc Andreessen, Dustin Moskovitz, Jimmy Wales, Stephen Fry and Ashton Kutcher. The largest group of Quora users is located in Silicon Valley, followed by New York City. Close to 40% of its users are from India as of January 2014.
+Quora uses the Pylons and Comet technologies for its backend and Ubuntu Linux as its operating system with MySQL as its database. It also uses Git and memcached. Quora uses Nginx as a reverse proxy server and HAProxy for load balancing. Quora has developed its own algorithm for ranking answers, which works similarly to PageRank. Quora uses Amazon Elastic Compute Cloud technology to host the servers that run its website. In August 2011, Quora switched its infrastructure's Python implementation from CPython to PyPy, in order to improve response time.
+Quora incorporates the aspect of gamification into their platform. For example, a user is rewarded credits for providing a quality answer. With these credits, users are able to individually ask and compensate experts to answer a certain question. For example, a user might use 250 credits to ask an expert (or qualified user) to answer the question.
+
+
+=== Privacy concerns ===
+In August 2012, blogger Ivan Kirigin pointed out that it was possible for acquaintances to see his activity including which questions he had looked at. In response, Quora stopped showing question views in feeds later that month. By default, Quora exposes its users' profiles, including their real names, to search engines.
+
+
+== Financials ==
+In March 2010, Quora received funding in the amount of $11 million from Benchmark Capital, valuing the start-up at $86 million. Quora's valuation was rumored to be more than $1 billion in February 2011, and the privately held company possibly turned down an acquisition offer of $300 million, according to Business Insider.
+In May 2012, Quora raised $50 million in Series B funds, valuing the company at over $400 million, bringing their total funding to $61 million. Co-founder D'Angelo, who owns 0.8% of Facebook stock, also invested $20 million of his own money in the B round.
+In April 2014, Quora announced an $80 million Series C round of funding, valuing the company at over $900 million. The funding was led by Tiger Global Management. D’Angelo also said the site would likely introduce its first ads in 2015.
+
+
+== Reception ==
+Quora has been favorably described in articles published in 2010 by The New York Times, USA Today, Time and The Daily Telegraph.
+According to Robert Scoble, Quora succeeded in combining attributes of Twitter, Facebook, and similar websites that are based on a system of users voting up content. Scoble later criticized Quora for being a "horrid service for blogging," and although a decent question and answer website, not substantially better than competitors.
+In 2010, D'Angelo and Cheever were among five named "Smartest Engineer runner-up" in the "smartest people in the tech" article by CNNMoney. They were also both listed in Inc. magazine's "Top 30 Under-30" entrepreneurs list of 2011.
+
+
+== See also ==
+List of question-and-answer websites
+
+
+== References ==
+
+
+== External links ==
+Official website
