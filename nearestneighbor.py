@@ -13,6 +13,7 @@ import time
 import logging
 import re
 import heapq
+import wikipedia
 
 
 class NearestNeighbor:
@@ -26,6 +27,7 @@ class NearestNeighbor:
         self.idword = {}
         self.bowcollection = {}
         self.features = {}
+        self.tfidf_count = {}
         self.boost_title = boost_title
         self.tfidf_threshold = tfidf_threshold
 
@@ -86,24 +88,24 @@ class NearestNeighbor:
 
     def create_tfidf_features(self):
         """Calculate tf-idf for all the bag of words stored in self.bowcollection"""
-        count = {}
         doc_count = len(self.bowcollection)
         for instanceid in self.bowcollection.keys():
             for word in self.bowcollection[instanceid]:
                 id = word[0]
-                if not id in count:
-                    count[id] = 1
+                if not id in self.tfidf_count:
+                    self.tfidf_count[id] = 1
                 else:
-                    count[id] += 1
+                    self.tfidf_count[id] += 1
         for instanceid in self.bowcollection.keys():
-            feature_vec = {}
+            featurevector = {}
             for word in self.bowcollection[instanceid]:
                 id = word[0]
                 val = float(word[1])
-                val_tfidf = val * math.log(doc_count / float(count[id]), 2)
+                val_tfidf = val * \
+                    math.log(doc_count / float(self.tfidf_count[id]), 2)
                 if val_tfidf > self.tfidf_threshold:
-                    feature_vec[id] = val_tfidf
-            self.features[instanceid] = feature_vec
+                    featurevector[id] = val_tfidf
+            self.features[instanceid] = featurevector
 
     def cosine_similarity(self, u, v):
         """calculates (u . v) / (mod(u) * mod(v))"""
@@ -122,10 +124,41 @@ class NearestNeighbor:
         Currently cosine similarity is used."""
         return self.cosine_similarity(u, v)
 
-    def knn(self, instanceid, nearestk=3):
-        """Finds k nearest neighbors for 'instanceid' datapoint"""
-        assert instanceid in self.features
-        featurevector = self.features[instanceid]
+    def knn(self, title=None, instanceid=None, nearestk=3):
+        """Finds k nearest neighbors for 'instanceid' datapoint.
+        If 'title' is passed then the wikipedia article corresponding
+        to 'title' is downloaded and nearest neighbors for 'title' article
+        are predicted.
+        """
+        assert title != None or instanceid != None
+        if title == None:
+            assert instanceid in self.features
+            featurevector = self.features[instanceid]
+        elif title + ".txt" in self.features.keys():
+            instanceid = title + ".txt"
+            featurevector = self.features[title + ".txt"]
+        else:
+            instanceid = title + ".txt"
+            page = wikipedia.page(title)
+            content = page.content.lower()
+            words = list(filter(len, re.split("\W+", content)))
+            wordcounts = {}
+            for word in words:
+                if word in self.idword:
+                    id = self.idword[word]
+                    if id in wordcounts:
+                        wordcounts[id] += 1
+                    else:
+                        wordcounts[id] = 1
+            featurevector = {}
+            for id in wordcounts.keys():
+                val = wordcounts[id]
+                val_tfidf = val * \
+                    math.log(len(self.bowcollection) /
+                             float(self.tfidf_count[id]), 2)
+                if val_tfidf > self.tfidf_threshold:
+                    featurevector[id] = val_tfidf
+
         neighbors = []
         for id in self.features.keys():
             if id == instanceid:
@@ -150,11 +183,18 @@ def main():
     nn.create_tfidf_features()
     print("Predicting")
     with open("output.txt", "w") as f:
+        # Note that articles in L are already present in the training dataset
         L = ["Lionel Messi.txt", "Breaking Bad.txt",
              "Google.txt", "John Cena.txt", "Eminem.txt", "Donald Trump.txt",
              "Deadpool.txt"]
         for x in L:
-            f.write(x + ": " + str(nn.knn(x)) + "\n")
+            f.write(x + ": " + str(nn.knn(instanceid=x)) + "\n")
+        f.write("-" * 50 + "\n")
+        # Not that articles in A are downloaded on the fly hence will take
+        # longer
+        A = ["Sundar Pichai"]
+        for x in A:
+            f.write(x + ": " + str(nn.knn(title=x)) + "\n")
 
 
 if __name__ == "__main__":
