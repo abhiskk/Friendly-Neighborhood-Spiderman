@@ -190,9 +190,8 @@ def main():
         for x in L:
             f.write(x + ": " + str(nn.knn(instanceid=x)) + "\n")
         f.write("-" * 50 + "\n")
-        # Not that articles in A are downloaded on the fly hence will take
-        # longer
-        A = ["Sundar Pichai"]
+        # Note that articles in A are downloaded on the fly hence the prediction is slower
+        A = ["Wayne Rooney", "Football", "Winston Churchill"]
         for x in A:
             f.write(x + ": " + str(nn.knn(title=x)) + "\n")
 
