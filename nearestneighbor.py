@@ -13,6 +13,7 @@ import time
 import logging
 import re
 import crawler
+import heapq
 
 
 class NearestNeighbor:
@@ -78,6 +79,10 @@ class NearestNeighbor:
             self.addinstance(instanceid=filepath,
                              filepath=datafolder + filepath)
 
+    def getids(self):
+        """Returns ids of datapoints present in features"""
+        return list(self.features.keys())
+
     def create_tfidf_features(self):
         """Calculate tf-idf for all the bag of words stored in self.bowcollection"""
         count = {}
@@ -90,28 +95,67 @@ class NearestNeighbor:
                 else:
                     count[id] += 1
         for instanceid in self.bowcollection.keys():
-            feature_vec = []
+            feature_vec = {}
             for word in self.bowcollection[instanceid]:
                 id = word[0]
                 val = float(word[1])
                 val_tfidf = val * math.log(doc_count / float(count[id]), 2)
                 if val_tfidf > self.tfidf_threshold:
-                    feature_vec.append((id, val_tfidf))
+                    feature_vec[id] = val_tfidf
             self.features[instanceid] = feature_vec
 
+    def cosine_similarity(self, u, v):
+        """calculates (u . v) / (mod(u) * mod(v))"""
+        modu = math.sqrt(sum([u[x] ** 2 for x in u.keys()]))
+        modv = math.sqrt(sum([v[x] ** 2 for x in v.keys()]))
+        if modu == 0 or modv == 0:
+            return 0
+        dotproduct = 0.0
+        for key in u.keys():
+            if key in v:
+                dotproduct += u[key] * v[key]
+        return dotproduct / (modu * modv)
+
+    def similarity(self, u, v):
+        """Finds similarity for feature vectors 'u' and 'v'.
+        Currently cosine similarity is used."""
+        return self.cosine_similarity(u, v)
+
+    def knn(self, instanceid, nearestk=5):
+        """Finds k nearest neighbors for 'instanceid' datapoint"""
+        assert instanceid in self.features
+        featurevector = self.features[instanceid]
+        neighbors = []
+        for id in self.features.keys():
+            if id == instanceid:
+                continue
+            val = self.similarity(featurevector, self.features[id])
+            if len(neighbors) < nearestk:
+                heapq.heappush(neighbors, (val, id))
+            elif val > neighbors[0][0]:
+                heapq.heappop(neighbors)
+                heapq.heappush(neighbors, (val, id))
+        L = len(neighbors)
+        A = [heapq.heappop(neighbors) for x in range(L)]
+        return [x[1] for x in reversed(A)]
 
 
 def tests():
     nn = NearestNeighbor()
     nn.addinstance("test.txt")
     nn.addinstance(title="New York", instancedata="")
+    assert abs(nn.similarity({0: 1.0, 2: 2.0}, {0: 1.0, 2: 2.0}) - 1) < 1e-6
+    assert abs(nn.similarity({0: 1.0, 2: 2.0}, {
+               0: 5.5}) - 5.5 / (5 ** 0.5 * 5.5)) < 1e-6
     return "Tests pass."
 
 
 def main():
     logging.basicConfig(filename="nearestneighbor.log", level=logging.DEBUG)
     nn = NearestNeighbor()
-    nn.addbulkinstances("TestData/")
+    print("Adding instances")
+    nn.addbulkinstances("Data/")
+    print("Creating tfidf features")
     nn.create_tfidf_features()
 
 if __name__ == "__main__":
