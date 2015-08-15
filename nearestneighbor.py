@@ -12,15 +12,16 @@ import math
 import time
 import logging
 import re
-import crawler
 import heapq
 
 
 class NearestNeighbor:
-    # TODO: add docstring
 
     def __init__(self, boost_title=1, tfidf_threshold=0):
-        # TODO: add docstring
+        """Increase the value of boost_title to improve the weightage
+        given to title of article. Features with weight below tfidf_threshold
+        are neglected.
+        """
         self.data = []
         self.idword = {}
         self.bowcollection = {}
@@ -121,7 +122,7 @@ class NearestNeighbor:
         Currently cosine similarity is used."""
         return self.cosine_similarity(u, v)
 
-    def knn(self, instanceid, nearestk=5):
+    def knn(self, instanceid, nearestk=3):
         """Finds k nearest neighbors for 'instanceid' datapoint"""
         assert instanceid in self.features
         featurevector = self.features[instanceid]
@@ -140,16 +141,6 @@ class NearestNeighbor:
         return [x[1] for x in reversed(A)]
 
 
-def tests():
-    nn = NearestNeighbor()
-    nn.addinstance("test.txt")
-    nn.addinstance(title="New York", instancedata="")
-    assert abs(nn.similarity({0: 1.0, 2: 2.0}, {0: 1.0, 2: 2.0}) - 1) < 1e-6
-    assert abs(nn.similarity({0: 1.0, 2: 2.0}, {
-               0: 5.5}) - 5.5 / (5 ** 0.5 * 5.5)) < 1e-6
-    return "Tests pass."
-
-
 def main():
     logging.basicConfig(filename="nearestneighbor.log", level=logging.DEBUG)
     nn = NearestNeighbor()
@@ -157,6 +148,14 @@ def main():
     nn.addbulkinstances("Data/")
     print("Creating tfidf features")
     nn.create_tfidf_features()
+    print("Predicting")
+    with open("output.txt", "w") as f:
+        L = ["Lionel Messi.txt", "Breaking Bad.txt",
+             "Google.txt", "John Cena.txt", "Eminem.txt", "Donald Trump.txt",
+             "Deadpool.txt"]
+        for x in L:
+            f.write(x + ": " + str(nn.knn(x)) + "\n")
+
 
 if __name__ == "__main__":
     main()
